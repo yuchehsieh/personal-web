@@ -4,8 +4,23 @@ import { Link } from 'react-router-dom';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
+import MenuIcon from '@material-ui/icons/Menu';
+import IconButton from '@material-ui/core/IconButton';
+
+import SideDrawer from './sideDrawer';
 
 class Header extends Component {
+  state = {
+    drawerOpen: false,
+    headerShow: false
+  };
+
+  toggleDrawer = value => {
+    this.setState({
+      drawerOpen: value
+    });
+  };
+
   render() {
     return (
       <AppBar
@@ -35,14 +50,29 @@ class Header extends Component {
               }
             </div>
           </div>
+          <div className="web_nav_wrapper">
+            <Link to="/collections">
+              <Button color="inherit">Collections</Button>
+            </Link>
 
-          <Link to="/collections">
-            <Button color="inherit">Collections</Button>
-          </Link>
+            <Link to="/resume">
+              <Button color="inherit">Resume</Button>
+            </Link>
+          </div>
+          <div className="mobile_nav_wrapper">
+            <IconButton
+              aria-label="Menu"
+              color="inherit"
+              onClick={() => this.toggleDrawer(true)}
+            >
+              <MenuIcon />
+            </IconButton>
+          </div>
 
-          <Link to="/resume">
-            <Button color="inherit">Resume</Button>
-          </Link>
+          <SideDrawer
+            open={this.state.drawerOpen}
+            onClose={value => this.toggleDrawer(value)}
+          />
         </Toolbar>
       </AppBar>
     );
