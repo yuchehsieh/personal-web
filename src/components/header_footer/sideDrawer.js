@@ -15,8 +15,8 @@ const SideDrawer = props => {
     >
       <List component="nav">
         <ListItem onClick={() => props.onClose(false)}>
-          <Link to="/collections">
-            <Button color="default">Collections</Button>
+          <Link to="/works">
+            <Button color="default">Works</Button>
           </Link>
         </ListItem>
 

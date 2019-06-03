@@ -51,8 +51,8 @@ class Header extends Component {
             </div>
           </div>
           <div className="web_nav_wrapper">
-            <Link to="/collections">
-              <Button color="inherit">Collections</Button>
+            <Link to="/works">
+              <Button color="inherit">Works</Button>
             </Link>
 
             <Link to="/resume">
