@@ -9,6 +9,11 @@ const Works = () => {
       <Link to="/works/ghowa">
         <Featured />
       </Link>
+      <div
+        style={{
+          height: '200px'
+        }}
+      />
     </div>
   );
 };
