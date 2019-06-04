@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import Layout from './hoc/layout';
 
 import Works from './components/works';
-import WorkDetail from './components/works/work_detail';
+import WorkDetail from './components/work_detail';
 import Resume from './components/resume';
 import NotFound from './components/ui/not_found';
 
