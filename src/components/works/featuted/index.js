@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { easePolyOut } from 'd3-ease';
 import NodeGroup from 'react-move/NodeGroup';
 
+import Fade from 'react-reveal/Reveal';
+
 class Featured extends Component {
   constructor(props) {
     super(props);
@@ -19,6 +21,14 @@ class Featured extends Component {
         },
         {
           id: 2,
+          background: '#093824'
+        },
+        {
+          id: 3,
+          background: '#093824'
+        },
+        {
+          id: 4,
           background: '#093824'
         }
       ]
@@ -78,8 +88,30 @@ class Featured extends Component {
       </NodeGroup>
     ) : null;
 
+  revealCards = () => (
+    <div className="timeline-blocks-container">
+      {this.state.cards.map(item => (
+        <Fade key={item.id} bottom distance="20px">
+          <div className="timeline-milestone">
+            <div className="timeline-date_viewport">2018 年 12 月</div>
+            <div
+              className="timeline-content_viewport"
+              style={{
+                height: '300px',
+                //width: '300px',
+
+                border: '1px solid',
+                background: `${item.background}`
+              }}
+            />
+          </div>
+        </Fade>
+      ))}
+    </div>
+  );
+
   render() {
-    return <div>{this.showCards()}</div>;
+    return <div>{this.revealCards()}</div>;
   }
 }
 
