@@ -46,19 +46,25 @@ class Featured extends Component {
         })}
       >
         {nodes => (
-          <div>
+          <div className="timeline-blocks-container">
             {nodes.map(({ key, data, state: { y, opacity } }) => (
-              <div
-                key={key}
-                style={{
-                  opacity,
-                  height: '300px',
-                  width: '300px',
-                  transform: `translateY(${y}px)`,
-                  border: '1px solid',
-                  background: `${data.background}`
-                }}
-              />
+              <div className="timeline-milestone">
+                <div>{/* 
+                time date bar
+            */}</div>
+                <div
+                  key={key}
+                  className="timeline-content_viewport"
+                  style={{
+                    opacity,
+                    height: '300px',
+                    //width: '300px',
+                    transform: `translateY(${y}px)`,
+                    border: '1px solid',
+                    background: `${data.background}`
+                  }}
+                />
+              </div>
             ))}
           </div>
         )}

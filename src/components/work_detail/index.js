@@ -48,7 +48,9 @@ class WorkDetail extends Component {
                 transform: `scale(${scale}, ${scale})`,
                 background: '#fff'
               }}
-            />
+            >
+              <div onClick={() => this.props.history.go(-1)}>x</div>
+            </div>
           </div>
         )}
       </Animate>

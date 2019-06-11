@@ -17,6 +17,9 @@ a {
   background: #98c5e9;
 }
 
+/* ==============================
+/*          Footer
+/* ============================= */
 footer {
   text-align: center;
   font-size: 16px;
@@ -33,6 +36,10 @@ footer .footer_discl {
   margin: 10px 0px;
 }
 
+/* ==============================
+/*          Not Found Page
+/* ============================= */
+
 .not_found_container {
   text-align: center;
   margin-top: 96px;
@@ -43,6 +50,34 @@ footer .footer_discl {
   font-size: 90px;
   font-family: 'Righteous', cursive;
   color: #d5ebfe;
+}
+
+/* ==============================
+/*          Work Page
+/* ============================= */
+
+.work-page {
+  width: 100vw;
+  padding: 40px 36px;
+}
+
+.timeline-blocks-container {
+  width: calc(100% - 70px);
+  border-left: 2.5px solid rgba(0, 0, 0, 0.4);
+  padding-left: 15px;
+  margin-bottom: 50px;
+}
+
+.timeline-blocks-container .timeline-milestone {
+  margin-bottom: 25px;
+}
+
+.timeline-blocks-container .timeline-content_viewport {
+  width: calc(100% - 70px);
+  box-shadow: 7px 15px 20px 0 rgba(0, 0, 0, 0.03);
+  padding: 20px 35px 40px;
+  cursor: pointer;
+  border-radius: 10px;
 }
 
 @media screen and (max-width: 480px) {
