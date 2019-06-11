@@ -49,9 +49,9 @@ class Featured extends Component {
           <div className="timeline-blocks-container">
             {nodes.map(({ key, data, state: { y, opacity } }) => (
               <div className="timeline-milestone">
-                <div>{/* 
-                time date bar
-            */}</div>
+                <div className="timeline-date_viewport" style={{ opacity }}>
+                  2018 年 12 月
+                </div>
                 <div
                   key={key}
                   className="timeline-content_viewport"
