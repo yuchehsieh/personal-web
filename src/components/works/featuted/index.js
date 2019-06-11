@@ -25,11 +25,7 @@ class Featured extends Component {
     };
   }
 
-  componentDidMount() {
-    window.scrollTo(0, 0);
-    // this.myRef.current.scrollTo(0, 0);
-    console.log('called');
-  }
+  componentDidMount() {}
 
   showCards = () =>
     this.state.cards ? (

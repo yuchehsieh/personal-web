@@ -9,9 +9,7 @@ import ScrollToTop from './hoc/scrollToTop';
 const App = props => {
   return (
     <BrowserRouter>
-      <ScrollToTop>
-        <Routes {...props} />
-      </ScrollToTop>
+      <Routes {...props} />
     </BrowserRouter>
   );
 };
