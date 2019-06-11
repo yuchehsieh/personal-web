@@ -31,25 +31,20 @@ class WorkDetail extends Component {
         }}
       >
         {({ scale }) => (
-          <div
-            style={{
-              height: '90vh',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              background: 'rgba(0,0,0, .3)'
-            }}
-          >
+          <div>
             <div
+              className="work-detail-container"
               style={{
-                width: '80%',
-                height: '80%',
                 transformOrigin: 'center bottom',
-                transform: `scale(${scale}, ${scale})`,
-                background: '#fff'
+                transform: `scale(${scale}, ${scale})`
               }}
             >
-              <div onClick={() => this.props.history.go(-1)}>x</div>
+              <div
+                className="close-btn"
+                onClick={() => this.props.history.go(-1)}
+              >
+                x
+              </div>
             </div>
           </div>
         )}
@@ -58,12 +53,7 @@ class WorkDetail extends Component {
   };
 
   render() {
-    return (
-      <div>
-        work detail
-        {this.showDetail()}
-      </div>
-    );
+    return <div>{this.showDetail()}</div>;
   }
 }
 

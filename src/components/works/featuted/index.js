@@ -3,22 +3,33 @@ import { easePolyOut } from 'd3-ease';
 import NodeGroup from 'react-move/NodeGroup';
 
 class Featured extends Component {
-  state = {
-    cards: [
-      {
-        id: 0,
-        background: '#BF4E30'
-      },
-      {
-        id: 1,
-        background: '#C6CCB2'
-      },
-      {
-        id: 2,
-        background: '#093824'
-      }
-    ]
-  };
+  constructor(props) {
+    super(props);
+
+    this.myRef = React.createRef();
+    this.state = {
+      cards: [
+        {
+          id: 0,
+          background: '#BF4E30'
+        },
+        {
+          id: 1,
+          background: '#C6CCB2'
+        },
+        {
+          id: 2,
+          background: '#093824'
+        }
+      ]
+    };
+  }
+
+  componentDidMount() {
+    window.scrollTo(0, 0);
+    // this.myRef.current.scrollTo(0, 0);
+    console.log('called');
+  }
 
   showCards = () =>
     this.state.cards ? (

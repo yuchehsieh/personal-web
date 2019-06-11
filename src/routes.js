@@ -1,6 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Layout from './hoc/layout';
+import ScrollToTop from './hoc/scrollToTop';
 
 import Works from './components/works';
 import WorkDetail from './components/work_detail';
