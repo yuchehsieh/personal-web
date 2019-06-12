@@ -6,7 +6,7 @@ import img_avatar from '../../Resources/images/avatar.jpg';
 
 const Avatar = () => {
   return (
-    <Fade duration={500} delay={300}>
+    <Fade duration={300} delay={300}>
       <div className="intro">
         <div className="avatar-box">
           <div

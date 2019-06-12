@@ -200,6 +200,27 @@ footer .footer_discl {
   text-align: center;
 }
 
+/* ==============================
+/*    About Page - Main Content
+/* ============================= */
+
+.main-content {
+  box-shadow: 7px 15px 20px 0 rgba(0, 0, 0, 0.03);
+  border-radius: 20px;
+  margin: 5px 28px 28px;
+  padding: 38px 36px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.dot-separator {
+  font-size: 18px;
+  text-align: center;
+}
+
+.email-me {
+  text-align: center;
+}
+
 @media screen and (max-width: 480px) {
   .mobile_nav_wrapper {
     display: block;

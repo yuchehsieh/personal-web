@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { animateScroll } from 'react-scroll';
 
 import Avatar from './avatar';
+import MainContent from './content';
 
 class About extends Component {
   componentDidMount() {
@@ -17,6 +18,7 @@ class About extends Component {
     return (
       <div className="about-page">
         <Avatar />
+        <MainContent />
       </div>
     );
   }
