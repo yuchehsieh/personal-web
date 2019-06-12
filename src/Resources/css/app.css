@@ -139,6 +139,67 @@ footer .footer_discl {
   align-items: center;
 }
 
+/* ==============================
+/*          About Page
+/* ============================= */
+
+.about-page {
+  width: 100vw;
+}
+
+.intro {
+  display: flex;
+  color: #919191;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  margin: 30px auto 0;
+  padding: 30px;
+}
+
+.intro .avatar-box {
+  position: relative;
+  border: 2px solid #f4f4fa;
+  /* background: #f4f4fa; */
+  border-radius: 100%;
+  width: 140px;
+  height: 140px;
+}
+
+.intro .avatar-box:before {
+  content: ' ';
+  position: absolute;
+  z-index: -1;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: 109%;
+  border: 3px solid #98c5e9;
+}
+
+.avatar-box .avatar {
+  width: 100px;
+  height: 100px;
+  clip-path: circle(65px at center);
+  vertical-align: middle;
+  padding: 30px;
+  margin: -9.5px;
+  background-size: cover !important;
+}
+
+.intro .name {
+  font-weight: 700;
+  font-size: 18px;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2;
+  letter-spacing: 1.7px;
+  text-align: left;
+  transition: all 0.3s;
+  text-align: center;
+}
+
 @media screen and (max-width: 480px) {
   .mobile_nav_wrapper {
     display: block;

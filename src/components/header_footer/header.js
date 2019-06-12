@@ -55,6 +55,10 @@ class Header extends Component {
               <Button color="inherit">Works</Button>
             </Link>
 
+            <Link to="/about">
+              <Button color="inherit">About</Button>
+            </Link>
+
             <Link to="/resume">
               <Button color="inherit">Resume</Button>
             </Link>
