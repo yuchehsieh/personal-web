@@ -7,7 +7,7 @@ import { animateScroll } from 'react-scroll';
 
 class Works extends Component {
   componentDidMount() {
-    animateScroll.scrollToTop({
+    animateScroll.scrollTo(1, {
       duration: 0
     });
 
