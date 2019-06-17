@@ -221,6 +221,33 @@ footer .footer_discl {
   text-align: center;
 }
 
+.email-me a {
+  border-radius: 40px;
+  box-shadow: 0 1px 15px 0 rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border: none;
+  padding: 20px 30px;
+  line-height: 1.23;
+  margin-top: 10px;
+  display: block;
+  width: 300px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: 1.5px;
+  color: #606060;
+  cursor: pointer;
+  outline: 0;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 0.5s;
+  text-decoration: none;
+}
+
+.email-me a:hover {
+  box-shadow: 10px 7px 10px 0 rgba(0, 0, 0, 0.15);
+}
+
 @media screen and (max-width: 480px) {
   .mobile_nav_wrapper {
     display: block;

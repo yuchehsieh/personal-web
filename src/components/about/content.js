@@ -13,6 +13,9 @@ class Content extends Component {
           </h1>
           <div className="email-me">
             <p>歡迎直接聯絡我！</p>
+            <a href="mailto:hsiehdanny860605@gmail.com">
+              hsiehdanny860605@gmail.com
+            </a>
           </div>
         </div>
       </Fade>
