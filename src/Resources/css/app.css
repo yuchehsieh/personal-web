@@ -18,6 +18,17 @@ a {
 }
 
 /* ==============================
+/*          Header
+/* ============================= */
+
+.mobile_nav_wrapper {
+  display: none;
+}
+.web_nav_wrapper {
+  display: block;
+}
+
+/* ==============================
 /*          Footer
 /* ============================= */
 footer {
@@ -71,18 +82,18 @@ footer .footer_discl {
   padding-bottom: 20px;
 }
 
-.timeline-blocks-container .timeline-milestone {
-  margin-bottom: 30px;
-  display: flex;
-  flex-direction: column;
-  /* align-items: center; */
-  position: relative;
-}
-
 .timeline-milestone .timeline-date_viewport {
   /*
    style the datetime text 
   */
+}
+
+.timeline-blocks-container .timeline-milestone {
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
 }
 
 .timeline-milestone .timeline-date_viewport::before {
@@ -140,7 +151,7 @@ footer .footer_discl {
 }
 
 /* ==============================
-/*          About Page
+/*       About Page / Avatar
 /* ============================= */
 
 .about-page {
@@ -248,6 +259,32 @@ footer .footer_discl {
   box-shadow: 10px 7px 10px 0 rgba(0, 0, 0, 0.15);
 }
 
+/* ==============================
+/*    About Page - time stone
+/* ============================= */
+
+.main-content .timeline-container {
+  position: relative;
+  margin-top: 50px;
+  padding-left: 15px;
+  color: #919191;
+  width: 100%;
+  height: auto;
+}
+
+.main-content .timeline-container .timeline-milestone {
+  display: flex;
+  align-items: center;
+}
+
+.main-content .timeline-container .timeline-milestone .timeline-date {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 2.5;
+  letter-spacing: 1.2px;
+}
+
+/* 
 @media screen and (max-width: 480px) {
   .mobile_nav_wrapper {
     display: block;
@@ -257,6 +294,9 @@ footer .footer_discl {
   }
   .not_found_container {
     font-size: 30px;
+  }
+  .main-content .timeline-container .timeline-milestone {
+    flex-direction: column
   }
 }
 
@@ -270,6 +310,9 @@ footer .footer_discl {
   .not_found_container {
     font-size: 50px;
   }
+  .main-content .timeline-container .timeline-milestone {
+    flex-direction: column
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1200px) {
@@ -282,8 +325,35 @@ footer .footer_discl {
   .not_found_container {
     font-size: 70px;
   }
+  .main-content .timeline-container .timeline-milestone {
+    flex-direction: column
+  }
+}
+*/
+
+@media screen and (max-width: 960px) {
+  .mobile_nav_wrapper {
+    display: block;
+  }
+  .web_nav_wrapper {
+    display: none;
+  }
+  .not_found_container {
+    font-size: 50px;
+  }
+  .main-content .timeline-container .timeline-milestone {
+    flex-direction: column;
+  }
+  .timeline-blocks-container .timeline-milestone {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+  }
 }
 
+/*
 @media screen and (min-width: 1200px) {
   .mobile_nav_wrapper {
     display: none;
@@ -299,3 +369,4 @@ footer .footer_discl {
     position: relative;
   }
 }
+*/
