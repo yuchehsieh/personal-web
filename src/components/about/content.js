@@ -19,8 +19,11 @@ class Content extends Component {
 
   renderMilestone = () =>
     this.state.milestones.map(milestone => (
-      <div className="timeline-milestone">
-        <div className="timeline-date">go with date indicator</div>
+      <div className="timeline-milestone" style={{ height: '300px' }}>
+        <div className="timeline-date">
+          <div className="paragrapah-indicator" />
+          go with date indicator
+        </div>
         <div className="timeline-content">go with main content</div>
       </div>
     ));
@@ -42,7 +45,7 @@ class Content extends Component {
   render() {
     return (
       <Fade delay={600} duration={300} bottom distance="300px" appear={true}>
-        <div className="main-content" style={{ height: '1000px' }}>
+        <div className="main-content">
           <p>this is main content haha</p>
           <div className="timeline-container">{this.renderMilestone()}</div>
           {this.renderMailMe()}

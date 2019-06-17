@@ -276,6 +276,7 @@ footer .footer_discl {
   display: flex;
   align-items: center;
   transition: all 0.3s;
+  border: 1px solid;
 }
 
 .main-content .timeline-container .timeline-milestone .timeline-date {
@@ -283,6 +284,42 @@ footer .footer_discl {
   font-weight: 400;
   line-height: 2.5;
   letter-spacing: 1.2px;
+  width: 20%;
+  border: 1px solid;
+  position: relative;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.main-content
+  .timeline-container
+  .timeline-milestone
+  .timeline-date
+  .paragrapah-indicator {
+  content: '';
+  width: 15px;
+  height: 15px;
+  background: #ecdbdb;
+  position: absolute;
+  right: -10px;
+  border-radius: 100%;
+}
+
+.main-content .timeline-container .timeline-milestone .timeline-content {
+  transition: all 0.5s;
+  padding-left: 35px;
+  padding-top: 20px;
+  font-size: 14px;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2;
+  letter-spacing: 1.5px;
+  text-align: left;
+  font-weight: 400;
+  width: 60%;
+  height: 100%;
+  border-left: 2.5px solid #98c5e9;
 }
 
 /* 
@@ -355,6 +392,28 @@ footer .footer_discl {
   .email-me a {
     width: 200px;
     font-size: 12px;
+  }
+
+  /* ==============================
+  /*    About Page - timestone
+  /* ============================= */
+
+  .main-content .timeline-container .timeline-milestone .timeline-content {
+    width: 100%;
+    border-left: 0px;
+  }
+
+  .main-content .timeline-container .timeline-milestone .timeline-date {
+    width: 100%;
+    align-self: flex-start;
+  }
+
+  .main-content
+    .timeline-container
+    .timeline-milestone
+    .timeline-date
+    .paragrapah-indicator {
+    left: -10px;
   }
 }
 
