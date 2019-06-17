@@ -260,7 +260,7 @@ footer .footer_discl {
 }
 
 /* ==============================
-/*    About Page - time stone
+/*    About Page - timestone
 /* ============================= */
 
 .main-content .timeline-container {
@@ -275,6 +275,7 @@ footer .footer_discl {
 .main-content .timeline-container .timeline-milestone {
   display: flex;
   align-items: center;
+  transition: all 0.3s;
 }
 
 .main-content .timeline-container .timeline-milestone .timeline-date {
@@ -350,6 +351,10 @@ footer .footer_discl {
     flex-direction: column;
     align-items: flex-start;
     position: relative;
+  }
+  .email-me a {
+    width: 200px;
+    font-size: 12px;
   }
 }
 
