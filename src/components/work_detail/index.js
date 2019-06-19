@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { easePolyOut } from 'd3-ease';
 import Animate from 'react-move/Animate';
 
+import Layout from '../../hoc/layout';
+
 class WorkDetail extends Component {
   state = {
     detail: {
@@ -53,7 +55,11 @@ class WorkDetail extends Component {
   };
 
   render() {
-    return <div>{this.showDetail()}</div>;
+    return (
+      <Layout>
+        <div>{this.showDetail()}</div>
+      </Layout>
+    );
   }
 }
 

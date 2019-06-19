@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
+import Layout from '../../hoc/layout';
+
 import { animateScroll } from 'react-scroll';
 
 import Avatar from './avatar';
@@ -16,10 +18,12 @@ class About extends Component {
   }
   render() {
     return (
-      <div className="about-page">
-        <Avatar />
-        <MainContent />
-      </div>
+      <Layout>
+        <div className="about-page">
+          <Avatar />
+          <MainContent />
+        </div>
+      </Layout>
     );
   }
 }
