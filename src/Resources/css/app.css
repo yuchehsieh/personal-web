@@ -219,13 +219,38 @@ footer .footer_discl {
   box-shadow: 7px 15px 20px 0 rgba(0, 0, 0, 0.03);
   border-radius: 20px;
   margin: 5px 28px 28px;
-  padding: 38px 36px;
+  padding: 38px 45px;
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.dot-separator {
-  font-size: 18px;
-  text-align: center;
+.main-content h1 {
+  font-style: normal;
+  font-stretch: normal;
+  text-align: left;
+  color: #606060;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.79;
+  letter-spacing: 1.7px;
+  margin-top: 40px;
+}
+
+.main-content p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 2.5;
+  letter-spacing: 1.2px;
+  color: #606060;
+}
+
+.main-content label {
+  font-size: 14px;
+  color: #6f6f6f;
+  border-radius: 50px;
+  display: inline-block;
+  margin: 0 6px 10px;
+  background-color: rgba(230, 207, 207, 0.75);
+  padding: 7px 15px;
 }
 
 .email-me {
@@ -276,16 +301,16 @@ footer .footer_discl {
   display: flex;
   align-items: center;
   transition: all 0.3s;
-  border: 1px solid;
+  /* border: 1px solid; */
 }
 
 .main-content .timeline-container .timeline-milestone .timeline-date {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 2.5;
   letter-spacing: 1.2px;
   width: 20%;
-  border: 1px solid;
+  /* border: 1px solid; */
   position: relative;
   padding-left: 20px;
   display: flex;
@@ -300,7 +325,7 @@ footer .footer_discl {
   content: '';
   width: 15px;
   height: 15px;
-  background: #ecdbdb;
+  background: #e7d1d1;
   position: absolute;
   right: -10px;
   border-radius: 100%;
@@ -309,7 +334,8 @@ footer .footer_discl {
 .main-content .timeline-container .timeline-milestone .timeline-content {
   transition: all 0.5s;
   padding-left: 35px;
-  padding-top: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   font-size: 14px;
   font-style: normal;
   font-stretch: normal;
@@ -406,6 +432,8 @@ footer .footer_discl {
   .main-content .timeline-container .timeline-milestone .timeline-date {
     width: 100%;
     align-self: flex-start;
+    font-size: 16px;
+    font-weight: 600;
   }
 
   .main-content
