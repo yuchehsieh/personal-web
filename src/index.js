@@ -4,6 +4,7 @@ import './Resources/css/app.css';
 
 import { BrowserRouter } from 'react-router-dom';
 import Routes from './routes';
+import * as serviceWorker from './serviceWorker';
 
 const App = props => {
   return (
@@ -14,3 +15,5 @@ const App = props => {
 };
 
 ReactDOM.render(<App />, document.getElementById('root'));
+
+serviceWorker.register();
