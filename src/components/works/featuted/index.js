@@ -13,23 +13,23 @@ class Featured extends Component {
       cards: [
         {
           id: 0,
-          background: '#BF4E30'
+          background: '#fff'
         },
         {
           id: 1,
-          background: '#C6CCB2'
+          background: '#fff'
         },
         {
           id: 2,
-          background: '#093824'
+          background: '#fff'
         },
         {
           id: 3,
-          background: '#093824'
+          background: '#fff'
         },
         {
           id: 4,
-          background: '#093824'
+          background: '#fff'
         }
       ]
     };
@@ -75,10 +75,8 @@ class Featured extends Component {
                   style={{
                     opacity,
                     height: '300px',
-                    //width: '300px',
                     transform: `translateY(${y}px)`,
-                    border: '1px solid',
-                    background: `${data.background}`
+                    background: '#fff'
                   }}
                 />
               </div>
@@ -93,15 +91,12 @@ class Featured extends Component {
       {this.state.cards.map(item => (
         <Fade key={item.id} bottom distance="20px">
           <div className="timeline-milestone">
-            <div className="timeline-date_viewport">2018 年 12 月</div>
+            <div className="timeline-date_viewport">Dec 2018 - Present</div>
             <div
               className="timeline-content_viewport"
               style={{
                 height: '300px',
-                //width: '300px',
-
-                border: '1px solid',
-                background: `${item.background}`
+                background: '#fff'
               }}
             />
           </div>

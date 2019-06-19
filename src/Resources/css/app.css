@@ -13,10 +13,6 @@ a {
   width: 100vw;
 }
 
-.bck_blue {
-  background: #fff;
-}
-
 /* ==============================
 /*          Home
 /* ============================= */
@@ -89,6 +85,7 @@ footer {
   color: #606060;
   padding: 30px 0px;
   width: 100vw;
+  background: #f7fffd;
 }
 
 footer .img_cover {
@@ -121,11 +118,13 @@ footer .footer_discl {
 
 .work-page {
   width: 100vw;
+  background: #f7fffd;
+  padding: 20px 0px;
 }
 
 .timeline-blocks-container {
   width: calc(100% - 70px);
-  border-left: 2.5px solid rgba(0, 0, 0, 0.4);
+  border-left: 2.5px solid rgba(0, 0, 0, 0.1);
   padding-left: 15px;
   margin: 40px 36px;
   margin-bottom: 50px;
@@ -146,13 +145,14 @@ footer .footer_discl {
   flex-direction: row;
   align-items: center;
   position: relative;
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .timeline-milestone .timeline-date_viewport::before {
   content: '';
   width: 15px;
   height: 15px;
-  background: #ecdbdb;
+  background: #ffaeae;
   position: absolute;
   left: -24px;
   /*margin-top: 25px;*/
@@ -178,10 +178,10 @@ footer .footer_discl {
 /* ============================= */
 
 .work-detail-container {
-  margin: 40px 28px;
+  margin: 0px 28px 0px 28px;
   border-radius: 20px;
   box-shadow: 7px 15px 20px 0 rgba(0, 0, 0, 0.03);
-  background-color: rgba(0, 0, 0, 0.08);
+  background: #fff;
   padding: 38px 36px;
   overflow: hidden;
   height: 500px;
@@ -208,6 +208,8 @@ footer .footer_discl {
 
 .about-page {
   width: 100vw;
+  background: #f7fffd;
+  padding: 20px 0px;
 }
 
 .intro {
@@ -270,9 +272,9 @@ footer .footer_discl {
 .main-content {
   box-shadow: 7px 15px 20px 0 rgba(0, 0, 0, 0.03);
   border-radius: 20px;
-  margin: 5px 28px 28px;
+  margin: 5px 28px 0px 28px;
   padding: 38px 45px;
-  background-color: rgba(0, 0, 0, 0.1);
+  background: #fff;
 }
 
 .main-content h1 {
@@ -301,7 +303,7 @@ footer .footer_discl {
   border-radius: 50px;
   display: inline-block;
   margin: 0 6px 10px;
-  background-color: rgba(230, 207, 207, 0.75);
+  background-color: #ffe8dd;
   padding: 7px 15px;
 }
 
@@ -397,7 +399,7 @@ footer .footer_discl {
   font-weight: 400;
   width: 60%;
   height: 100%;
-  border-left: 2.5px solid #98c5e9;
+  border-left: 2.5px solid #b9ebdd;
 }
 
 /* 

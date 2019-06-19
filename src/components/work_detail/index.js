@@ -33,7 +33,7 @@ class WorkDetail extends Component {
         }}
       >
         {({ scale }) => (
-          <div>
+          <div style={{ background: '#f7fffd', padding: '20px 0px' }}>
             <div
               className="work-detail-container"
               style={{

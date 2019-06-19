@@ -55,10 +55,7 @@ class Content extends Component {
       <Fragment key={i}>
         <p>{skill.label}</p>
         {skill.labels.map(({ label }, j) => (
-          <label
-            key={j}
-            style={{ backgroundColor: i % 2 === 1 && 'rgba(217,223,242,.75)' }}
-          >
+          <label key={j} style={{ backgroundColor: i % 2 === 1 && '#e3f2ff' }}>
             {label}
           </label>
         ))}
