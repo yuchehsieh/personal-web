@@ -15,6 +15,22 @@ class Header extends Component {
     headerShow: false
   };
 
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll = () => {
+    if (window.scrollY > 0) {
+      this.setState({
+        headerShow: true
+      });
+    } else {
+      this.setState({
+        headerShow: false
+      });
+    }
+  };
+
   toggleDrawer = value => {
     this.setState({
       drawerOpen: value
@@ -26,47 +42,41 @@ class Header extends Component {
       <AppBar
         position="fixed"
         style={{
-          backgroundColor: '#98c5e9',
           boxShadow: 'none',
-          padding: '10px 0px ',
-          borderBottom: '2px solid #00285e'
+          padding: '10px 0px',
+          backgroundColor: '#fff'
         }}
       >
         <Toolbar style={{ display: 'flex' }}>
-          <div style={{ flexGrow: 1 }}>
+          <div className="header_wrapper">
             <div className="header_logo">
-              <div
-                style={{
-                  width: '70px',
-                  heihgt: '70px',
-                  border: '1px solid',
-                  textAlign: 'center'
-                }}
-              >
-                Murphy
-              </div>
-              {
-                //<CityLogo link={true} linkTo="/" width="70px" height="70px" />
-              }
+              Murphy Hsieh
+              <div className="color-bar" />
             </div>
           </div>
           <div className="web_nav_wrapper">
             <Link to="/works">
-              <Button color="inherit">Works</Button>
+              <Button color="black" disableRipple={true}>
+                Works
+              </Button>
             </Link>
 
             <Link to="/about">
-              <Button color="inherit">About</Button>
+              <Button color="black" disableRipple={true}>
+                About
+              </Button>
             </Link>
 
             <Link to="/resume">
-              <Button color="inherit">Resume</Button>
+              <Button color="black" disableRipple={true}>
+                Resume
+              </Button>
             </Link>
           </div>
           <div className="mobile_nav_wrapper">
             <IconButton
               aria-label="Menu"
-              color="inherit"
+              color="black"
               onClick={() => this.toggleDrawer(true)}
             >
               <MenuIcon />
