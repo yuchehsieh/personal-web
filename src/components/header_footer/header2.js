@@ -5,27 +5,8 @@ class Header extends Component {
   render() {
     const currentPath = this.props.location.pathname.substr(1);
     return (
-      <div
-        style={{
-          display: 'flex',
-          position: 'fixed',
-          width: '100vw',
-          height: '15vh',
-          boxShadow: 'none',
-          padding: '10px 0px',
-          backgroundColor: '#fff',
-          zIndex: '10'
-        }}
-      >
-        <div
-          style={{
-            display: 'flex',
-            flex: 1,
-            alignItems: 'center',
-            padding: '0px 100px',
-            paddingTop: '20px'
-          }}
-        >
+      <header>
+        <div className="header-container">
           <div className="header_wrapper">
             <div className="header_logo">
               Murphy Hsieh
@@ -64,7 +45,7 @@ class Header extends Component {
             />
           </div>
         </div>
-      </div>
+      </header>
     );
   }
 }
