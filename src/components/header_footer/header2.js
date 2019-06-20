@@ -10,7 +10,7 @@ class Header extends Component {
           display: 'flex',
           position: 'fixed',
           width: '100vw',
-          height: '10vh',
+          height: '15vh',
           boxShadow: 'none',
           padding: '10px 0px',
           backgroundColor: '#fff',
@@ -22,7 +22,8 @@ class Header extends Component {
             display: 'flex',
             flex: 1,
             alignItems: 'center',
-            padding: '0px 20px'
+            padding: '0px 100px',
+            paddingTop: '20px'
           }}
         >
           <div className="header_wrapper">

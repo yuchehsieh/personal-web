@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
 import Header from '../components/header_footer/header2';
 import Footer from '../components/header_footer/footer';
 
