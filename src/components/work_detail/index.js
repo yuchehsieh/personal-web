@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { easePolyOut } from 'd3-ease';
 import Animate from 'react-move/Animate';
+import { animateScroll } from 'react-scroll';
 
 import Layout from '../../hoc/layout';
 
@@ -15,6 +16,10 @@ class WorkDetail extends Component {
     const workName = this.props.match.params.work_name;
     this.setState({ workName });
     console.log(workName);
+
+    animateScroll.scrollTo(1, {
+      duration: 0
+    });
   }
 
   showDetail = () => {

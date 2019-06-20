@@ -122,6 +122,14 @@ footer .footer_discl {
   padding: 20px 0px;
 }
 
+.work-page p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 2.5;
+  letter-spacing: 1.2px;
+  color: #606060;
+}
+
 .timeline-blocks-container {
   width: calc(100% - 70px);
   border-left: 2.5px solid rgba(0, 0, 0, 0.1);
@@ -470,8 +478,8 @@ footer .footer_discl {
     position: relative;
   }
   .email-me a {
-    width: 200px;
-    font-size: 12px;
+    width: 170px;
+    font-size: 9px;
   }
 
   /* ==============================
