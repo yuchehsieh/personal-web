@@ -1,20 +1,38 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Header from '../components/header_footer/header';
+import Header from '../components/header_footer/header2';
 import Footer from '../components/header_footer/footer';
 
-const Layout = props => {
-  return (
-    <div>
-      <Header />
-      <AppBar position="fixed" />
-      <Toolbar style={{ padding: '10px' }} />
-      {props.children}
-      <Footer />
-    </div>
-  );
-};
+import SideDrawer from '../components/header_footer/sideDrawer2';
+
+class Layout extends Component {
+  state = {
+    showDrawer: false
+  };
+
+  handleDrawer = state => {
+    this.setState({ showDrawer: state });
+  };
+
+  render() {
+    return (
+      <div>
+        <SideDrawer
+          show={this.state.showDrawer}
+          handleDrawer={this.handleDrawer}
+        />
+        <Header
+          handleDrawer={this.handleDrawer}
+          drawerShowed={this.state.showDrawer}
+        />
+        <div style={{ width: '100vw', height: '10vh' }} />
+        {this.props.children}
+        <Footer />
+      </div>
+    );
+  }
+}
 
 export default Layout;

@@ -73,7 +73,51 @@ a {
   display: none;
 }
 .web_nav_wrapper {
-  display: block;
+  display: flex;
+}
+
+.web_nav_wrapper p {
+  margin-right: 20px;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 18px;
+}
+
+.web_nav_wrapper .selected {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.menu-bar {
+  width: 30px;
+  height: 4px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+}
+
+/* ==============================
+/*      Header - Side Drawer
+/* ============================= */
+
+.side-drawer .icon-wrapper .menu-bar {
+  transition: all 0.3s;
+}
+
+.side-drawer .icon-wrapper .menu-bar.opening1 {
+  transition: all 0.3s;
+  transform: rotate(45deg) translate(16px);
+  width: 45px;
+}
+
+.side-drawer .icon-wrapper .menu-bar.opening2 {
+  transition: all 0.3s;
+  transform: rotate(-45deg) translate(11px);
+  width: 48px;
+}
+
+.side-drawer .icon-wrapper .menu-bar .closing1 {
+}
+
+.side-drawer .icon-wrapper .menu-bar .closing12 {
 }
 
 /* ==============================
@@ -459,8 +503,16 @@ footer .footer_discl {
 
 @media screen and (max-width: 960px) {
   .mobile_nav_wrapper {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    height: 27px;
+    justify-content: space-between;
   }
+
+  .mobile_nav_wrapper.disappear {
+    opacity: 0;
+  }
+
   .web_nav_wrapper {
     display: none;
   }
