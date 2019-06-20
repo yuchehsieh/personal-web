@@ -64,6 +64,11 @@ header .header-container {
   padding-top: 20px;
 }
 
+.header-expander {
+  width: 100vw;
+  height: 15vh;
+}
+
 .header_wrapper {
   flex-grow: 1;
   display: flex;
@@ -588,6 +593,10 @@ footer .img-icon-wrapper .img-icon:hover svg path {
 
   header .header-container {
     padding: 0px 20px;
+  }
+
+  .header-expander {
+    height: 10vh;
   }
 
   .header_logo {

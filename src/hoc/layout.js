@@ -25,7 +25,7 @@ class Layout extends Component {
           handleDrawer={this.handleDrawer}
           drawerShowed={this.state.showDrawer}
         />
-        <div style={{ width: '100vw', height: '10vh' }} />
+        <div className="header-expander" />
         {this.props.children}
         <Footer />
       </div>
