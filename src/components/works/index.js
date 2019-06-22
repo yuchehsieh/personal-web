@@ -31,15 +31,7 @@ class Works extends Component {
             containing Lorem Ipsum passages,
           </p>
           <p />
-          <Link to="/works/ghowa">
-            <Featured />
-          </Link>
-
-          <div
-            style={{
-              height: '200px'
-            }}
-          />
+          <Featured />
         </div>
       </Layout>
     );

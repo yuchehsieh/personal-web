@@ -4,6 +4,7 @@ import Animate from 'react-move/Animate';
 import { animateScroll } from 'react-scroll';
 
 import Layout from '../../hoc/layout';
+import RenderMailMe from '../ui/main_me';
 
 import Ghowa from './ghowa';
 
@@ -17,11 +18,22 @@ class WorkDetail extends Component {
   componentDidMount() {
     const workName = this.props.match.params.work_name;
     this.setState({ workName });
-    console.log(workName);
 
     animateScroll.scrollTo(1, {
       duration: 0
     });
+  }
+
+  renderProjectDetail() {
+    const { workName } = this.state;
+    if (workName === 'ghowa') return <Ghowa />;
+  }
+
+  renderEmailSubject() {
+    const { workName } = this.state;
+    let upperProjectName;
+    if (workName === 'ghowa') upperProjectName = 'GHOWA';
+    return `I have questions/feedbacks about ${upperProjectName}`;
   }
 
   showDetail = () => {
@@ -40,7 +52,12 @@ class WorkDetail extends Component {
         }}
       >
         {({ scale }) => (
-          <div style={{ background: '#f7fffd', padding: '40px 0px' }}>
+          <div
+            style={{
+              background: 'rgba(253, 253, 253, 1)',
+              padding: '40px 0px'
+            }}
+          >
             <div
               className="work-detail-container"
               style={{
@@ -48,13 +65,17 @@ class WorkDetail extends Component {
                 transform: `scale(${scale}, ${scale})`
               }}
             >
-              <Ghowa />
+              {this.renderProjectDetail()}
               <div
                 className="close-btn"
                 onClick={() => this.props.history.go(-1)}
               >
                 x
               </div>
+              {RenderMailMe(
+                '對於此專案，歡迎給我回饋！',
+                this.renderEmailSubject()
+              )}
             </div>
           </div>
         )}

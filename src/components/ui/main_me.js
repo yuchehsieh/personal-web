@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 
-const RenderMailMe = desc => (
+const RenderMailMe = (desc, subject) => (
   <Fragment>
     <h1 style={{ fontSize: '18px', textAlign: 'center' }}>
       <strong>・・・</strong>
@@ -17,7 +17,12 @@ const RenderMailMe = desc => (
       >
         {desc}
       </p>
-      <a href="mailto:hsiehdanny860605@gmail.com">hsiehdanny860605@gmail.com</a>
+      <a
+        href={`mailto:hsiehdanny860605@gmail.com?subject=${subject || ''}
+      `}
+      >
+        hsiehdanny860605@gmail.com
+      </a>
     </div>
   </Fragment>
 );

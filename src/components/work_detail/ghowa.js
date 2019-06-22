@@ -13,8 +13,6 @@ import Mockup2 from '../../Resources/images/ghowa/page-mockup2.png';
 import Mockup3 from '../../Resources/images/ghowa/page-mockup3.png';
 import Mockup4 from '../../Resources/images/ghowa/page-mockup4.png';
 
-import RenderMailMe from '../ui/main_me';
-
 class Ghowa extends Component {
   render() {
     return (
@@ -31,6 +29,7 @@ class Ghowa extends Component {
             <div className="language">
               <span>程式語言:</span>
               <label>React-Native</label>
+              <label>Redux</label>
               <label>React-Native-Navigation</label>
             </div>
           </div>
@@ -71,8 +70,11 @@ class Ghowa extends Component {
             <img className="img" src={Mockup1} alt="wireframe1" />
             <img className="img" src={Mockup3} alt="wireframe3" />
           </div>
+          <h1>其他紀錄</h1>
+          <ul>
+            <li>入圍 2019 APP 移動應用創新賽 決賽</li>
+          </ul>
         </div>
-        {RenderMailMe('對於此專案，歡迎給我回饋！')}
       </div>
     );
   }

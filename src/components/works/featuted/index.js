@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { easePolyOut } from 'd3-ease';
 import NodeGroup from 'react-move/NodeGroup';
-
 import Fade from 'react-reveal/Reveal';
+
+import Ghowa from './ghowa';
 
 class Featured extends Component {
   constructor(props) {
@@ -13,23 +15,9 @@ class Featured extends Component {
       cards: [
         {
           id: 0,
-          background: '#fff'
-        },
-        {
-          id: 1,
-          background: '#fff'
-        },
-        {
-          id: 2,
-          background: '#fff'
-        },
-        {
-          id: 3,
-          background: '#fff'
-        },
-        {
-          id: 4,
-          background: '#fff'
+          date: 'Dec 2018 - Present',
+          pane: <Ghowa />,
+          linkto: '/works/ghowa'
         }
       ]
     };
@@ -78,7 +66,9 @@ class Featured extends Component {
                     transform: `translateY(${y}px)`,
                     background: '#fff'
                   }}
-                />
+                >
+                  <Ghowa />
+                </div>
               </div>
             ))}
           </div>
@@ -90,16 +80,19 @@ class Featured extends Component {
     <div className="timeline-blocks-container">
       {this.state.cards.map(item => (
         <Fade key={item.id} bottom distance="20px">
-          <div className="timeline-milestone">
-            <div className="timeline-date_viewport">Dec 2018 - Present</div>
-            <div
-              className="timeline-content_viewport"
-              style={{
-                height: '300px',
-                background: '#fff'
-              }}
-            />
-          </div>
+          <Link to={item.linkto}>
+            <div className="timeline-milestone">
+              <div className="timeline-date_viewport">{item.date}</div>
+              <div
+                className="timeline-content_viewport"
+                style={{
+                  background: '#fff'
+                }}
+              >
+                {item.pane}
+              </div>
+            </div>
+          </Link>
         </Fade>
       ))}
     </div>
