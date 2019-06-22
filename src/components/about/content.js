@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 
 import Fade from 'react-reveal/Fade';
+import RenderMailMe from '../ui/main_me';
 
 class Content extends Component {
   state = {
@@ -82,20 +83,6 @@ class Content extends Component {
       </div>
     ));
 
-  renderMailMe = () => (
-    <Fragment>
-      <h1 style={{ fontSize: '18px', textAlign: 'center' }}>
-        <strong>・・・</strong>
-      </h1>
-      <div className="email-me">
-        <p>歡迎直接聯絡我！</p>
-        <a href="mailto:hsiehdanny860605@gmail.com">
-          hsiehdanny860605@gmail.com
-        </a>
-      </div>
-    </Fragment>
-  );
-
   render() {
     return (
       <Fade delay={600} duration={300} bottom distance="300px" appear={true}>
@@ -120,7 +107,7 @@ class Content extends Component {
           {this.renderSkill()}
           <h1>經歷</h1>
           <div className="timeline-container">{this.renderMilestone()}</div>
-          {this.renderMailMe()}
+          {RenderMailMe('歡迎直接聯絡我！')}
         </div>
       </Fade>
     );

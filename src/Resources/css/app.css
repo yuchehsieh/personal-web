@@ -307,8 +307,6 @@ footer .img-icon-wrapper .img-icon:hover svg path {
   box-shadow: 7px 15px 20px 0 rgba(0, 0, 0, 0.03);
   background: #fff;
   padding: 38px 36px;
-  overflow: hidden;
-  height: 500px;
   position: relative;
 }
 
@@ -391,6 +389,44 @@ footer .img-icon-wrapper .img-icon:hover svg path {
 
 .detail-page .title-wrapper .title-desc-wrapper .language label {
   background-color: #e3f2ff;
+}
+
+.detail-page .project-detail h1 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.79;
+  letter-spacing: 1.7px;
+  text-align: left;
+  color: #606060;
+}
+
+.detail-page .project-detail p {
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2.5;
+  letter-spacing: 1.2px;
+  text-align: left;
+  color: #606060;
+}
+
+.detail-page .project-detail .img-group {
+  display: block;
+}
+
+.detail-page .project-detail .color-scheme {
+  width: 100%;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.detail-page .project-detail .img-group img {
+  display: 'inline-block';
+  width: 20%;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  background-size: cover !important;
 }
 
 /* ==============================
@@ -720,11 +756,33 @@ footer .img-icon-wrapper .img-icon:hover svg path {
 }
 
 @media screen and (max-width: 625px) {
+  /* ==============================
+/*          Work Detail
+/* ============================= */
+
   .detail-page .title-wrapper {
     display: flex;
     width: 100%;
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .detail-page .title-wrapper .title-desc-wrapper {
+    margin-left: 0px;
+  }
+
+  .detail-page .title-wrapper .icon {
+    width: 120px;
+    height: 120px;
+  }
+
+  .detail-page .title-wrapper .title-desc-wrapper label {
+    font-size: 12px;
+  }
+
+  .detail-page .title-wrapper .title-desc-wrapper .app-slogan,
+  .detail-page .title-wrapper .title-desc-wrapper span {
+    font-size: 14px;
   }
 
   .detail-page .title-wrapper .title-desc-wrapper .language {
@@ -734,6 +792,10 @@ footer .img-icon-wrapper .img-icon:hover svg path {
   .detail-page .title-wrapper .title-desc-wrapper .language span {
     display: block;
     margin: 10px 0px;
+  }
+
+  .detail-page .project-detail h1 {
+    font-size: 16px;
   }
 }
 

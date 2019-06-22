@@ -13,6 +13,8 @@ import Mockup2 from '../../Resources/images/ghowa/page-mockup2.png';
 import Mockup3 from '../../Resources/images/ghowa/page-mockup3.png';
 import Mockup4 from '../../Resources/images/ghowa/page-mockup4.png';
 
+import RenderMailMe from '../ui/main_me';
+
 class Ghowa extends Component {
   render() {
     return (
@@ -33,6 +35,44 @@ class Ghowa extends Component {
             </div>
           </div>
         </div>
+        <div className="project-detail">
+          <h1>專案概觀</h1>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
+          </p>
+          <h1>專案簡介</h1>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book.
+          </p>
+          <h1>Wireframe</h1>
+          <div className="img-group">
+            <img className="img" src={Wireframe2} alt="wireframe2" />
+            <img className="img" src={Wireframe4} alt="wireframe4" />
+            <img className="img" src={Wireframe1} alt="wireframe1" />
+            <img className="img" src={Wireframe3} alt="wireframe3" />
+          </div>
+
+          <h1>色彩計畫</h1>
+          <div>
+            <img
+              className="color-scheme"
+              src={ColorScheme}
+              alt="color-scheme"
+            />
+          </div>
+          <h1>實際畫面</h1>
+          <div className="img-group">
+            <img className="img" src={Mockup2} alt="wireframe2" />
+            <img className="img" src={Mockup4} alt="wireframe4" />
+            <img className="img" src={Mockup1} alt="wireframe1" />
+            <img className="img" src={Mockup3} alt="wireframe3" />
+          </div>
+        </div>
+        {RenderMailMe('對於此專案，歡迎給我回饋！')}
       </div>
     );
   }
