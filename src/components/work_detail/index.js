@@ -5,6 +5,8 @@ import { animateScroll } from 'react-scroll';
 
 import Layout from '../../hoc/layout';
 
+import Ghowa from './ghowa';
+
 class WorkDetail extends Component {
   state = {
     detail: {
@@ -46,6 +48,7 @@ class WorkDetail extends Component {
                 transform: `scale(${scale}, ${scale})`
               }}
             >
+              <Ghowa />
               <div
                 className="close-btn"
                 onClick={() => this.props.history.go(-1)}

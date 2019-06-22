@@ -15,7 +15,9 @@ class Header extends Component {
           </div>
           <div className="web_nav_wrapper">
             <Link to="/works">
-              <p className={currentPath === 'works' ? 'selected' : ''}>Works</p>
+              <p className={currentPath.startsWith('works') ? 'selected' : ''}>
+                Works
+              </p>
             </Link>
 
             <Link to="/about">
