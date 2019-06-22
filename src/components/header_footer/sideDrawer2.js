@@ -1,7 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 import Fade from 'react-reveal/Fade';
+
+import {
+  iconFacebook,
+  iconGithub,
+  iconLinkedin
+} from '../../Resources/svgIcons';
 
 const SideDrawer = props => {
   return (
@@ -40,7 +45,7 @@ const SideDrawer = props => {
         style={{
           position: 'absolute',
           right: 20,
-          top: 43,
+          top: 35,
           display: 'flex',
           flexDirection: 'column',
           height: '27px',
@@ -60,6 +65,24 @@ const SideDrawer = props => {
             background: 'whitesmoke'
           }}
         />
+      </div>
+
+      <div className="img-icon-wrapper">
+        <a
+          className="img-icon"
+          href="https://www.facebook.com/profile.php?id=100002498776608"
+        >
+          {iconFacebook()}
+        </a>
+        <a className="img-icon" href="https://github.com/yuchehsieh">
+          {iconGithub()}
+        </a>
+        <a
+          className="img-icon"
+          href="https://www.linkedin.com/in/%E8%82%B2%E5%93%B2-%E8%AC%9D-805109163/"
+        >
+          {iconLinkedin()}
+        </a>
       </div>
     </div>
   );
