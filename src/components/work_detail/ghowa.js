@@ -128,12 +128,6 @@ class Ghowa extends Component {
                   />
                 ))}
               </div>
-              {
-                //<img className="img" src={Mockup2} alt="wireframe2" />
-                //<img className="img" src={Mockup4} alt="wireframe4" />
-                //<img className="img" src={Mockup1} alt="wireframe1" />
-                //<img className="img" src={Mockup3} alt="wireframe3" />
-              }
               <h1>其他紀錄</h1>
               <ul>
                 <li>入圍 2019 APP 移動應用創新賽 決賽</li>
@@ -157,5 +151,7 @@ class Ghowa extends Component {
     );
   }
 }
+
+// Ghowa.contextType = UiContext;
 
 export default Ghowa;

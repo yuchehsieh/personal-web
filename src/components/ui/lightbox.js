@@ -4,6 +4,8 @@ import Carousel, { Modal, ModalGateway } from 'react-images';
 import { UiContext } from '../../index';
 
 class Lightbox extends Component {
+  // static contextType = UiContext;
+
   render() {
     const { isOpen, images, currentIndex, onClose } = this.props;
 
@@ -27,5 +29,7 @@ class Lightbox extends Component {
     );
   }
 }
+
+// Lightbox.contextType = UiContext;
 
 export default Lightbox;

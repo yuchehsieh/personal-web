@@ -434,6 +434,7 @@ footer .img-icon-wrapper .img-icon:hover svg path {
   margin-bottom: 10px;
   margin-right: 10px;
   background-size: cover !important;
+  cursor: pointer;
 }
 
 /* ==============================

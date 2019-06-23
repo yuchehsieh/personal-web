@@ -6,7 +6,12 @@ import { BrowserRouter } from 'react-router-dom';
 import Routes from './routes';
 import * as serviceWorker from './serviceWorker';
 
-export const UiContext = React.createContext();
+export const UiContext = React.createContext({
+  state: {
+    isLightBoxOpen: false
+  },
+  toggleLightboxState: () => {}
+});
 
 class UiProvider extends React.Component {
   state = {
