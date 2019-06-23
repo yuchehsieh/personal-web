@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import Carousel, { Modal, ModalGateway } from 'react-images';
 
-import { UiContext } from '../../index';
+import UiContext from '../contexts/uiContext';
 
 class Lightbox extends Component {
   // static contextType = UiContext;

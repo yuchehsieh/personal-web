@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
-import { UiContext } from '../../index';
+import UiContext from '../contexts/uiContext';
 
 class Header extends Component {
   render() {

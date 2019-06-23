@@ -14,7 +14,7 @@ import Mockup3 from '../../Resources/images/ghowa/page-mockup3.png';
 import Mockup4 from '../../Resources/images/ghowa/page-mockup4.png';
 
 import Lightbox from '../ui/lightbox';
-import { UiContext } from '../../index';
+import UiContext from '../contexts/uiContext';
 
 class Ghowa extends Component {
   state = {
@@ -56,6 +56,8 @@ class Ghowa extends Component {
 
   render() {
     const { wireframe, mockup } = this.state;
+
+    console.log(this.context);
 
     return (
       <UiContext.Consumer>
@@ -152,6 +154,6 @@ class Ghowa extends Component {
   }
 }
 
-// Ghowa.contextType = UiContext;
+Ghowa.contextType = UiContext;
 
 export default Ghowa;
