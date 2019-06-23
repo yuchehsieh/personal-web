@@ -13,8 +13,50 @@ import Mockup2 from '../../Resources/images/ghowa/page-mockup2.png';
 import Mockup3 from '../../Resources/images/ghowa/page-mockup3.png';
 import Mockup4 from '../../Resources/images/ghowa/page-mockup4.png';
 
+import Lightbox from '../ui/lightbox';
+
 class Ghowa extends Component {
+  state = {
+    wireframe: {
+      isOpen: false,
+      currentIndex: 0,
+      images: [
+        { src: Wireframe2 },
+        { src: Wireframe4 },
+        { src: Wireframe1 },
+        { src: Wireframe3 }
+      ]
+    },
+    mockup: {
+      isOpen: false,
+      currentIndex: 0,
+      images: [
+        { src: Mockup2 },
+        { src: Mockup4 },
+        { src: Mockup1 },
+        { src: Mockup3 }
+      ]
+    }
+  };
+
+  closeLightbox = type => {
+    const element = { ...this.state[type] };
+    element.isOpen = false;
+    element.currentIndex = 0;
+    this.setState({ [type]: element });
+  };
+
+  openLightbox = (type, index) => {
+    debugger;
+    const element = { ...this.state[type] };
+    element.isOpen = true;
+    element.currentIndex = index;
+    this.setState({ [type]: element });
+  };
+
   render() {
+    const { wireframe, mockup } = this.state;
+
     return (
       <div className="detail-page">
         <div className="title-wrapper">
@@ -49,10 +91,21 @@ class Ghowa extends Component {
           </p>
           <h1>Wireframe</h1>
           <div className="img-group">
-            <img className="img" src={Wireframe2} alt="wireframe2" />
-            <img className="img" src={Wireframe4} alt="wireframe4" />
-            <img className="img" src={Wireframe1} alt="wireframe1" />
-            <img className="img" src={Wireframe3} alt="wireframe3" />
+            {wireframe.images.map((image, i) => (
+              <img
+                className="img"
+                onClick={() => this.openLightbox('wireframe', i)}
+                src={image.src}
+                alt={`wireframe${i + 1}`}
+              />
+            ))}
+
+            {
+              // <img className="img" src={Wireframe2} alt="wireframe2" />
+              // <img className="img" src={Wireframe4} alt="wireframe4" />
+              // <img className="img" src={Wireframe1} alt="wireframe1" />
+              // <img className="img" src={Wireframe3} alt="wireframe3" />
+            }
           </div>
 
           <h1>色彩計畫</h1>
@@ -75,6 +128,12 @@ class Ghowa extends Component {
             <li>入圍 2019 APP 移動應用創新賽 決賽</li>
           </ul>
         </div>
+        <Lightbox
+          onClose={() => this.closeLightbox('wireframe')}
+          isOpen={wireframe.isOpen}
+          images={wireframe.images}
+          currentIndex={wireframe.currentIndex}
+        />
       </div>
     );
   }

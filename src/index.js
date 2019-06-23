@@ -6,11 +6,38 @@ import { BrowserRouter } from 'react-router-dom';
 import Routes from './routes';
 import * as serviceWorker from './serviceWorker';
 
+export const UiContext = React.createContext();
+
+class UiProvider extends React.Component {
+  state = {
+    isLightBoxOpen: false
+  };
+
+  toggleLightboxState = () => {
+    this.setState({ isLightBoxOpen: !this.state.isLightBoxOpen });
+  };
+
+  render() {
+    return (
+      <UiContext.Provider
+        value={{
+          state: this.state,
+          toggleLightboxState: this.toggleLightboxState
+        }}
+      >
+        {this.props.children}
+      </UiContext.Provider>
+    );
+  }
+}
+
 const App = props => {
   return (
-    <BrowserRouter>
-      <Routes {...props} />
-    </BrowserRouter>
+    <UiProvider>
+      <BrowserRouter>
+        <Routes {...props} />
+      </BrowserRouter>
+    </UiProvider>
   );
 };
 
