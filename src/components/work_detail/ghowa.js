@@ -97,6 +97,7 @@ class Ghowa extends Component {
               <div className="img-group">
                 {wireframe.images.map((image, i) => (
                   <img
+                    key={i}
                     className="img"
                     onClick={() => {
                       this.openLightbox('wireframe', i);
@@ -120,6 +121,7 @@ class Ghowa extends Component {
               <div className="img-group">
                 {mockup.images.map((image, i) => (
                   <img
+                    key={i}
                     className="img"
                     onClick={() => {
                       this.openLightbox('mockup', i);

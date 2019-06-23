@@ -4,8 +4,12 @@ import { Link, withRouter } from 'react-router-dom';
 import UiContext from '../contexts/uiContext';
 
 class Header extends Component {
+  static contextType = UiContext;
+
   render() {
     const currentPath = this.props.location.pathname.substr(1);
+
+    console.log(this.context);
 
     return (
       <UiContext.Consumer>
