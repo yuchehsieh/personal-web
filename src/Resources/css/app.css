@@ -56,6 +56,11 @@ header {
   transition: all 0.2s;
 }
 
+header.hiding {
+  transform: translateY(-15vh);
+  padding: 0px;
+}
+
 header .header-container {
   display: flex;
   flex: 1;
@@ -718,6 +723,11 @@ footer .img-icon-wrapper .img-icon:hover svg path {
 
   header {
     height: 10vh;
+  }
+
+  header.hiding {
+    transform: translateY(-10vh);
+    padding: 0px;
   }
 
   header .header-container {

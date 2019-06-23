@@ -10,7 +10,7 @@ class Header extends Component {
     return (
       <UiContext.Consumer>
         {context => (
-          <header>
+          <header className={`${context.state.isLightBoxOpen ? 'hiding' : ''}`}>
             <div className="header-container">
               <div className="header_wrapper">
                 <div className="header_logo">
@@ -26,7 +26,6 @@ class Header extends Component {
                     }
                   >
                     Works
-                    {console.log(context)}
                   </p>
                 </Link>
 
