@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { easePolyOut } from 'd3-ease';
 import NodeGroup from 'react-move/NodeGroup';
-import Fade from 'react-reveal/Reveal';
+import Fade from 'react-reveal/Fade';
 
 import Ghowa from './ghowa';
 
