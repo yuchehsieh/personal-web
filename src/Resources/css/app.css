@@ -18,11 +18,109 @@ a {
 /* ============================= */
 
 .home-container {
-  width: 100vw;
-  height: 100vh;
+  /*width: 100vw;*/
+  /*height: 100vh;*/
+  background-size: cover;
+
+  background-image: url("../images/app-competition.png");
+  background-position-x: -10%;
+  background-position-y: 5%;
+
+  /* aspect ratio */
+  padding-top: 100vh;
+  height: 0;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.2s;
+}
+
+.home-content-container {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  overflow: hidden;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  padding-left: 8%;
+  padding-top: 10%;
+}
+
+.home-content-container::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  background: rgba(0,0,0, .7);
+}
+
+.home-container h1 {
+  font-size: 6em;
+  color: white;
+  z-index: 10;
+  margin-top: 0.4em;
+  margin-bottom: 0.5em;
+  opacity: 0;
+}
+
+.home-container .space {
+  width: 1.3em;
+  height: 1.3em;
+}
+
+.home-container .row {
+  display: inline-flex;
+}
+
+.home-hello-text {
+  animation-name: popup;
+  animation-delay: 0.5s; /* first delay */
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+}
+
+.home-there-text {
+  animation-name: popup;
+  animation-duration: 0.5s;
+  animation-delay: 1.2s;
+  animation-fill-mode: forwards;
+}
+
+.home-i-text {
+  animation-name: popup;
+  animation-duration: 0.2s;
+  animation-delay: 1.7s;
+  animation-fill-mode: forwards;
+}
+
+.home-am-text {
+  animation-name: popup;
+  animation-duration: 0.2s;
+  animation-delay: 2.0s;
+  animation-fill-mode: forwards;
+}
+
+.home-name-text {
+  animation-name: popup;
+  animation-duration: 0.2s;
+  animation-delay: 2.3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes popup {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .home-container .btn-get-start {
@@ -32,6 +130,13 @@ a {
   background: #e998e29b;
   transition: all 0.3s;
   cursor: pointer;
+  z-index: 10;
+  opacity: 0;
+  color: white;
+  animation-name: popup;
+  animation-duration: 0.5s;
+  animation-delay: 3.0s;
+  animation-fill-mode: forwards;
 }
 
 .home-container .btn-get-start:hover {
@@ -86,6 +191,7 @@ header .header-container {
   font-size: 25px;
   font-family: 'Libre Baskerville', serif;
   position: relative;
+  cursor: pointer;
 }
 
 .header_logo .color-bar {
