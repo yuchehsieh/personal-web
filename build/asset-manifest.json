@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/personal-web/static/css/main.3163f375.chunk.css",
+    "main.js": "/personal-web/static/js/main.3a9233a1.chunk.js",
+    "main.js.map": "/personal-web/static/js/main.3a9233a1.chunk.js.map",
+    "runtime~main.js": "/personal-web/static/js/runtime~main.3dd17c8b.js",
+    "runtime~main.js.map": "/personal-web/static/js/runtime~main.3dd17c8b.js.map",
+    "static/js/2.5fa3343b.chunk.js": "/personal-web/static/js/2.5fa3343b.chunk.js",
+    "static/js/2.5fa3343b.chunk.js.map": "/personal-web/static/js/2.5fa3343b.chunk.js.map",
+    "index.html": "/personal-web/index.html",
+    "precache-manifest.70e17a37fc20c6bdac28b6fb265a4d55.js": "/personal-web/precache-manifest.70e17a37fc20c6bdac28b6fb265a4d55.js",
+    "service-worker.js": "/personal-web/service-worker.js",
+    "static/css/main.3163f375.chunk.css.map": "/personal-web/static/css/main.3163f375.chunk.css.map",
+    "static/media/apo-icon.png": "/personal-web/static/media/apo-icon.f8188bfa.png",
+    "static/media/app.css": "/personal-web/static/media/app-competition.b75be8fe.png",
+    "static/media/avatar.jpg": "/personal-web/static/media/avatar.8440b9a3.jpg",
+    "static/media/color-scheme.png": "/personal-web/static/media/color-scheme.71991678.png",
+    "static/media/page-mockup1.png": "/personal-web/static/media/page-mockup1.e0a8c3b0.png",
+    "static/media/page-mockup2.png": "/personal-web/static/media/page-mockup2.d64686c8.png",
+    "static/media/page-mockup3.png": "/personal-web/static/media/page-mockup3.ccfdbadb.png",
+    "static/media/page-mockup4.png": "/personal-web/static/media/page-mockup4.f0d6c7e3.png",
+    "static/media/page-wireframe1.png": "/personal-web/static/media/page-wireframe1.f78d4ea2.png",
+    "static/media/page-wireframe2.png": "/personal-web/static/media/page-wireframe2.d5342be5.png",
+    "static/media/page-wireframe3.png": "/personal-web/static/media/page-wireframe3.264ad90a.png",
+    "static/media/page-wireframe4.png": "/personal-web/static/media/page-wireframe4.ac14f7c8.png"
+  }
+}
