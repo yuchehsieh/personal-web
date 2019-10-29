@@ -62,7 +62,7 @@ a {
 }
 
 .home-container h1 {
-  font-size: 6em;
+  font-size: 8em;
   color: white;
   z-index: 10;
   margin-top: 0.4em;
@@ -183,6 +183,12 @@ a {
   color: #fff;
 }
 
+@media (max-width: 1200px) {
+  .home-container h1 {
+    font-size: 6em;
+  }
+}
+
 @media (max-width: 960px) {
   .home-container .row {
     display: inline-grid;
@@ -202,6 +208,11 @@ a {
     width: 1em;
     height: 1em;
   }
+
+  .home-container .color-bar::before {
+    height: 14%;
+    top: 47%;
+  }
 }
 
 @media (max-width: 500px) {
@@ -212,6 +223,10 @@ a {
   .home-container .space {
     width: 0.6em;
     height: 0.6em;
+  }
+
+  .home-container .color-bar::before {
+    top: 50%;
   }
 }
 
