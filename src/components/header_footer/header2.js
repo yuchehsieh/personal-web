@@ -41,7 +41,8 @@ class Header extends Component {
                                     </p>
                                 </Link>
 
-                                <a href="https://drive.google.com/file/d/1QX4_h8O0udvN2inwIeTIGpDhUtY-D25g/view?usp=sharing">
+                                <a href="https://drive.google.com/file/d/1QX4_h8O0udvN2inwIeTIGpDhUtY-D25g/view?usp=sharing"
+                                   target="_blank">
                                     <p className={currentPath === 'resume' ? 'selected' : ''}>
                                         Resume
                                     </p>

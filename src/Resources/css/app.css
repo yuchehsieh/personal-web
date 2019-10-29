@@ -23,8 +23,8 @@ a {
   background-size: cover;
 
   background-image: url("../images/app-competition.png");
-  background-position-x: -10%;
-  background-position-y: 5%;
+  background-position-x: center;
+  background-position-y: center;
 
   /* aspect ratio */
   padding-top: 100vh;
@@ -75,7 +75,10 @@ a {
   height: 1.3em;
 }
 
-.home-container .row {
+.home-container .row,
+.home-container .hello-there-row,
+.home-container .i-am-row,
+.home-container .name-row{
   display: inline-flex;
 }
 
@@ -109,9 +112,35 @@ a {
 
 .home-name-text {
   animation-name: popup;
-  animation-duration: 0.2s;
+  animation-duration: 0.5s;
   animation-delay: 2.3s;
   animation-fill-mode: forwards;
+}
+.home-last-name-text {
+  animation-name: popup;
+  animation-duration: 0.3s;
+  animation-delay: 2.8s;
+  animation-fill-mode: forwards;
+}
+
+.home-container .color-bar {
+  position: relative;
+}
+
+
+.home-container .color-bar::before {
+  content: '';
+  height: 10%;
+  width: 0;
+  background: #84d9c2;
+  position: absolute;
+  top: 50%;
+
+  animation-name: colorBar;
+  animation-duration: 0.3s;
+  animation-delay: 3.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
 }
 
 @keyframes popup {
@@ -120,6 +149,15 @@ a {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes colorBar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
   }
 }
 
@@ -135,7 +173,7 @@ a {
   color: white;
   animation-name: popup;
   animation-duration: 0.5s;
-  animation-delay: 3.0s;
+  animation-delay: 4.5s;
   animation-fill-mode: forwards;
 }
 
@@ -143,6 +181,38 @@ a {
   padding: 20px 50px;
   background: #e998e2bb;
   color: #fff;
+}
+
+@media (max-width: 960px) {
+  .home-container .row {
+    display: inline-grid;
+  }
+
+  .home-container .row:nth-child(1) {
+    margin-top: 12em;
+  }
+
+  .home-container h1 {
+    font-size: 4.5em;
+    margin-top: 0.25em;
+    margin-bottom: 0.35em;
+  }
+
+  .home-container .space {
+    width: 1em;
+    height: 1em;
+  }
+}
+
+@media (max-width: 500px) {
+  .home-container h1 {
+    font-size: 3em;
+  }
+
+  .home-container .space {
+    width: 0.6em;
+    height: 0.6em;
+  }
 }
 
 /* ==============================
