@@ -1,4 +1,7 @@
 import React, {Component, Fragment} from 'react';
+import { FirestoreDocument } from 'react-firestore'
+
+
 
 import Fade from 'react-reveal/Fade';
 import RenderMailMe from '../ui/main_me';
@@ -51,17 +54,16 @@ class Content extends Component {
         ]
     };
 
-    renderSkill = () =>
-        this.state.skills.map((skill, i) => (
-            <Fragment key={i}>
-                <p>{skill.label}</p>
-                {skill.labels.map(({label}, j) => (
-                    <label key={j} style={{backgroundColor: i % 2 === 1 && '#e3f2ff'}}>
-                        {label}
-                    </label>
-                ))}
-            </Fragment>
-        ));
+    renderSkill = (label, skills, odd) => (
+        <Fragment>
+            <p>{label}</p>
+            {skills.map(skill =>
+                <label style={{backgroundColor: odd && '#e3f2ff'}}>
+                    {skill}
+                </label>
+            )}
+        </Fragment>
+    );
 
     renderMilestone = () =>
         this.state.milestones.map(milestone => (
@@ -85,18 +87,30 @@ class Content extends Component {
 
     render() {
         return (
-            <Fade delay={600} duration={300} bottom distance="300px" appear={true}>
-                <div className="main-content">
-                    <p>
-                        我是謝育哲，目前就讀於臺北教育大學玩具與遊戲設計研究所，在大學期間曾經擔任系學會幹部與班上的副班代，參與籌備過許多活動。大四下時加入一間新創公司實習參與專案進行，專職在前端開發，並參與產品開發會議，應用大學四年的所學，並同時開始在職場上累積經驗。
-                    </p>
-                    <h1>技能</h1>
-                    {this.renderSkill()}
-                    <h1>經歷</h1>
-                    <div className="timeline-container">{this.renderMilestone()}</div>
-                    {RenderMailMe('歡迎直接聯絡我！')}
-                </div>
-            </Fade>
+            <FirestoreDocument
+                path="about/about"
+                // sort="publishedDate:desc,authorName"
+                render={({ isLoading, data }) => {
+
+                    if(isLoading) return <p>loading...</p>;
+
+                    return(
+                        <Fade delay={600} duration={300} bottom distance="300px" appear={true}>
+                            <div className="main-content">
+                                <p>{data.introduction}</p>
+                                <h1>技能</h1>
+                                {this.renderSkill('網頁前端', data.frontendSkills, true)}
+                                {this.renderSkill('網頁後端', data.backendSkills)}
+                                {this.renderSkill('手機 App 開發', data.appSkills, true)}
+                                {this.renderSkill('其他', data.otherSkills)}
+                                <h1>經歷</h1>
+                                <div className="timeline-container">{this.renderMilestone()}</div>
+                                {RenderMailMe('歡迎直接聯絡我！')}
+                            </div>
+                        </Fade>
+                    );
+                }}
+            />
         );
     }
 }
