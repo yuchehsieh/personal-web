@@ -1,7 +1,29 @@
 import React, {Component} from 'react';
+import { auth } from '../../firebase';
 
 class Home extends Component {
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            isLogin: false,
+        }
+    }
+
+    componentDidMount() {
+        const user = auth.currentUser;
+        if(user) {
+            this.setState({
+                isLogin: true,
+            });
+        }
+    }
+
     render() {
+
+        const { isLogin } = this.state;
+
         return (
             <div className="home-container">
                 <div className="home-content-container">
@@ -9,7 +31,9 @@ class Home extends Component {
                         <div className="hello-there-row">
                             <h1 className="home-hello-text">Hello</h1>
                             <div className="space"/>
-                            <h1 className="home-there-text">There</h1>
+                            <h1 className="home-there-text">{
+                                isLogin ? 'Administrator': 'There'
+                            }</h1>
                         </div>
                     </div>
                     <div className="row">
