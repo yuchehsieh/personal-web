@@ -9,7 +9,7 @@ class Header extends Component {
     render() {
         const currentPath = this.props.location.pathname.substr(1);
 
-        console.log(this.props);
+        // console.log(this.props);
 
         return (
             <UiContext.Consumer>

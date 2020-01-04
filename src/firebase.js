@@ -12,8 +12,9 @@ const firebaseApp = firebase.initializeApp({
 });
 
 const db = firebaseApp.firestore();
+const auth = firebase.auth();
 
 const worksRef = db.collection('works');
 const aboutRef = db.collection('about');
 
-export { db, worksRef, aboutRef };
+export { db, auth, worksRef, aboutRef };
