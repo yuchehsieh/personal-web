@@ -47,4 +47,5 @@
 .login-container .error-message {
     font-size: 0.8em;
     color: #ffaeae;
+    margin: 0;
 }
