@@ -1,8 +1,22 @@
 import React, { Component } from 'react';
 
 import AppIcon from '../../../Resources/images/ghowa/apo-icon.png';
+import { worksRef, aboutRef } from '../../../firebase';
 
 class Ghowa extends Component {
+
+  // async componentDidMount() {
+  //   const worksQuerySnapshot = await worksRef.get();
+  //   const worksData = worksQuerySnapshot.docs.map(doc => doc.data());
+  //   console.log(worksData);
+  //
+  //   const aboutQuerySnapshot = await aboutRef.get();
+  //   const aboutData = aboutQuerySnapshot.docs.map(doc => doc.data());
+  //   console.log(aboutData);
+  //
+  // }
+
+
   render() {
     return (
       <div className="detail-page">
