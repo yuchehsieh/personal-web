@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {FirestoreDocument, FirestoreCollection} from 'react-firestore';
-
+import {withRouter} from 'react-router-dom'
 
 import AppIcon from '../../Resources/images/ghowa/apo-icon.png';
 import ColorScheme from '../../Resources/images/ghowa/color-scheme.png';
@@ -17,47 +17,64 @@ import Mockup4 from '../../Resources/images/ghowa/page-mockup4.png';
 
 import Lightbox from '../ui/lightbox';
 import UiContext from '../contexts/uiContext';
-import {worksRef} from "../../firebase";
+import {worksRef, auth} from "../../firebase";
+import EditIcon from '../../Resources/images/edit.svg';
 
 class Ghowa extends Component {
-    state = {
-        wireframe: {
-            isOpen: false,
-            currentIndex: 0,
-            images: [
-                {src: Wireframe2},
-                {src: Wireframe4},
-                {src: Wireframe1},
-                {src: Wireframe3}
-            ]
-        },
-        mockup: {
-            isOpen: false,
-            currentIndex: 0,
-            images: [
-                {src: Mockup2},
-                {src: Mockup4},
-                {src: Mockup1},
-                {src: Mockup3}
-            ]
-        },
 
-        introduction: '',
-        overview: '',
-        records: [],
+    constructor(props) {
+        super(props);
 
-        isLoading: true,
+        this.edit = this.edit.bind(this);
+        this.state = {
+            wireframe: {
+                isOpen: false,
+                currentIndex: 0,
+                images: [
+                    {src: Wireframe2},
+                    {src: Wireframe4},
+                    {src: Wireframe1},
+                    {src: Wireframe3}
+                ]
+            },
+            mockup: {
+                isOpen: false,
+                currentIndex: 0,
+                images: [
+                    {src: Mockup2},
+                    {src: Mockup4},
+                    {src: Mockup1},
+                    {src: Mockup3}
+                ]
+            },
 
-    };
+            introduction: '',
+            overview: '',
+            records: [],
+
+            isLoading: true,
+            isLogin: false,
+        };
+    }
+
 
     async componentDidMount() {
         await this.fetchGhowa();
+        const user = auth.currentUser;
+        if (user) {
+            this.setState({
+                isLogin: true,
+            });
+        }
+    }
+
+    edit() {
+        this.props.history.push('/edit-ghowa');
     }
 
     async fetchGhowa() {
         const worksQuerySnapshot = await worksRef.get();
         const worksData = worksQuerySnapshot.docs.map(doc => doc.data())[0];
-        console.log(worksData);
 
         const {introduction, overview, records} = worksData;
 
@@ -85,7 +102,7 @@ class Ghowa extends Component {
 
     render() {
 
-        const {wireframe, mockup, introduction, overview, records, isLoading} = this.state;
+        const {wireframe, mockup, introduction, overview, records, isLoading, isLogin} = this.state;
 
         if (isLoading) {
             return <p>loading</p>
@@ -97,7 +114,16 @@ class Ghowa extends Component {
                             <div className="title-wrapper">
                                 <div className="icon" style={{background: `url(${AppIcon})`}}/>
                                 <div className="title-desc-wrapper">
-                                    <span className="app-name">Ghowa</span>
+                                    <div>
+                                        <span className="app-name">Ghowa</span>
+
+                                        {isLogin &&
+                                        <img src={EditIcon}
+                                             style={{width: '1em', marginLeft: '1em', cursor: 'pointer'}}
+                                             onClick={this.edit}
+                                        />}
+
+                                    </div>
                                     <span className="app-slogan">協助同伴快速分帳的 APP</span>
                                     <div className="role">
                                         <span>角色:</span>
@@ -186,4 +212,4 @@ class Ghowa extends Component {
 
 Ghowa.contextType = UiContext;
 
-export default Ghowa;
+export default withRouter(Ghowa);

@@ -8,6 +8,7 @@ import About from './components/about';
 import Resume from './components/resume';
 import NotFound from './components/ui/not_found';
 import Login from './components/login';
+import EditGhowa from "./components/admin/editGhowa";
 
 const Routes = props => {
     return (
@@ -17,6 +18,7 @@ const Routes = props => {
             <Route path="/about" exact component={About}/>
             <Route path="/resume" exact component={Resume}/>
             <Route path="/login" exact component={Login}/>
+            <Route path="/edit-ghowa" exact component={EditGhowa}/>
             <Route path="/" exact component={Home}/>
             <Route component={NotFound}/>
         </Switch>
